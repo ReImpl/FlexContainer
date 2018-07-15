@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FlexContainer_Example' do
+  pod 'FlexContainer', :path => '../'
+
+  target 'FlexContainer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
