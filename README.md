@@ -1,6 +1,5 @@
 # FlexContainer
 
-[![CI Status](https://img.shields.io/travis/genkernel/FlexContainer.svg?style=flat)](https://travis-ci.org/genkernel/FlexContainer)
 [![Version](https://img.shields.io/cocoapods/v/FlexContainer.svg?style=flat)](https://cocoapods.org/pods/FlexContainer)
 [![License](https://img.shields.io/cocoapods/l/FlexContainer.svg?style=flat)](https://cocoapods.org/pods/FlexContainer)
 [![Platform](https://img.shields.io/cocoapods/p/FlexContainer.svg?style=flat)](https://cocoapods.org/pods/FlexContainer)
