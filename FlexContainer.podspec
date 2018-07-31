@@ -21,13 +21,19 @@ FlexContainer is oversimplified StackView that hides tons of limitations.
   s.subspec 'UIKit' do |ui|
     ui.frameworks = 'UIKit'
 
-    ui.source_files = "FlexContainer/Classes/UIKit/**/*.{swift}"
+    ui.source_files = "FlexContainer/Classes/UIKit/*.{swift}"
+  end
+
+  s.subspec 'Styled' do |styled|
+    styled.frameworks = 'UIKit'
+
+    styled.source_files = "FlexContainer/Classes/Styled/*.{swift}"
   end
 
   s.subspec 'FlexContainer' do |flex|
     flex.dependency 'FlexContainer/UIKit'
 
-    flex.source_files  = "FlexContainer/Classes/FlexContainer/**/*.{swift}"
+    flex.source_files  = "FlexContainer/Classes/FlexContainer/*.{swift}"
   end
   
   s.swift_version = '4.2'

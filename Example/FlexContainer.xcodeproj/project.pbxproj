@@ -7,16 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E68F247210FD8480080B7BE /* LightStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68F246210FD8480080B7BE /* LightStyle.swift */; };
+		1E68F249210FD8520080B7BE /* DarkStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68F248210FD8520080B7BE /* DarkStyle.swift */; };
+		1E68F24B210FDC410080B7BE /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68F24A210FDC410080B7BE /* AppStyle.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		8F0D2740D936CE07AB663107 /* Pods_FlexContainer_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2572922A7C7D6DC4ED5E6950 /* Pods_FlexContainer_Example.framework */; };
+		7A5FEB28C9ED6950267E7CC7 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F116473ACC904A75D3EEE8 /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16F5CB40BC0C75EEBDF26C4D /* Pods-FlexContainer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexContainer_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexContainer_Tests/Pods-FlexContainer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1C1C52F188439C2BE2A0B2E0 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		1E68F246210FD8480080B7BE /* LightStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightStyle.swift; sourceTree = "<group>"; };
+		1E68F248210FD8520080B7BE /* DarkStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkStyle.swift; sourceTree = "<group>"; };
+		1E68F24A210FDC410080B7BE /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		205E47CF5F3C55B8DD03A61A /* Pods_FlexContainer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexContainer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2572922A7C7D6DC4ED5E6950 /* Pods_FlexContainer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexContainer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,11 +33,11 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6C9EA6AAB8D3A6BB4E7DE141 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		78F116473ACC904A75D3EEE8 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89BA42EA6EE42191E7D4038 /* Pods-FlexContainer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexContainer_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexContainer_Example/Pods-FlexContainer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BEA97A1AD95F3FAAA6EBA507 /* FlexContainer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FlexContainer.podspec; path = ../FlexContainer.podspec; sourceTree = "<group>"; };
+		C0AEFF53FB899D609F03CE04 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D4ECD2F29EFEEFD7A8712781 /* Pods-FlexContainer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexContainer_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexContainer_Example/Pods-FlexContainer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D620853F682CB02B3475DD56 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FB8BD82873A4D81CFCB3F0D7 /* Pods-FlexContainer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexContainer_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexContainer_Tests/Pods-FlexContainer_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -41,19 +48,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F0D2740D936CE07AB663107 /* Pods_FlexContainer_Example.framework in Frameworks */,
+				7A5FEB28C9ED6950267E7CC7 /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E68F245210FD8370080B7BE /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				1E68F24A210FDC410080B7BE /* AppStyle.swift */,
+				1E68F246210FD8480080B7BE /* LightStyle.swift */,
+				1E68F248210FD8520080B7BE /* DarkStyle.swift */,
+			);
+			name = Styles;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for FlexContainer */,
-				607FACE81AFB9204008FA782 /* Tests */,
+				607FACD21AFB9204008FA782 /* Src */,
 				607FACD11AFB9204008FA782 /* Products */,
 				F7FFC04D925371245041DC67 /* Pods */,
 				E299B0542F26FF20CF075800 /* Frameworks */,
@@ -68,17 +84,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Example for FlexContainer */ = {
+		607FACD21AFB9204008FA782 /* Src */ = {
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				1E68F245210FD8370080B7BE /* Styles */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Example for FlexContainer";
+			name = Src;
 			path = FlexContainer;
 			sourceTree = "<group>";
 		};
@@ -86,23 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		607FACE81AFB9204008FA782 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		607FACE91AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -122,6 +122,7 @@
 			children = (
 				2572922A7C7D6DC4ED5E6950 /* Pods_FlexContainer_Example.framework */,
 				205E47CF5F3C55B8DD03A61A /* Pods_FlexContainer_Tests.framework */,
+				78F116473ACC904A75D3EEE8 /* Pods_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,6 +134,8 @@
 				D4ECD2F29EFEEFD7A8712781 /* Pods-FlexContainer_Example.release.xcconfig */,
 				16F5CB40BC0C75EEBDF26C4D /* Pods-FlexContainer_Tests.debug.xcconfig */,
 				FB8BD82873A4D81CFCB3F0D7 /* Pods-FlexContainer_Tests.release.xcconfig */,
+				C0AEFF53FB899D609F03CE04 /* Pods-Example.debug.xcconfig */,
+				1C1C52F188439C2BE2A0B2E0 /* Pods-Example.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -213,7 +216,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FlexContainer_Example/Pods-FlexContainer_Example-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FlexContainer/FlexContainer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -222,7 +225,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlexContainer_Example/Pods-FlexContainer_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E20D6109DF088A7BDC09159A /* [CP] Check Pods Manifest.lock */ = {
@@ -236,7 +239,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FlexContainer_Example-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -251,7 +254,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				1E68F249210FD8520080B7BE /* DarkStyle.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				1E68F247210FD8480080B7BE /* LightStyle.swift in Sources */,
+				1E68F24B210FDC410080B7BE /* AppStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +391,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B89BA42EA6EE42191E7D4038 /* Pods-FlexContainer_Example.debug.xcconfig */;
+			baseConfigurationReference = C0AEFF53FB899D609F03CE04 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FlexContainer/Info.plist;
@@ -403,7 +409,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4ECD2F29EFEEFD7A8712781 /* Pods-FlexContainer_Example.release.xcconfig */;
+			baseConfigurationReference = 1C1C52F188439C2BE2A0B2E0 /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FlexContainer/Info.plist;
