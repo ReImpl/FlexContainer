@@ -14,7 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 	
-	func application(_ app: UIApplication, willFinishLaunchingWithOptions opts: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+	#if swift(>=4.2)
+	public typealias LaunchOptionKey = UIApplication.LaunchOptionsKey
+	#else
+	public typealias LaunchOptionKey = UIApplicationLaunchOptionsKey
+	#endif
+	
+	func application(_ app: UIApplication, willFinishLaunchingWithOptions opts: [LaunchOptionKey : Any]? = nil) -> Bool {
 		toggleCurrentStyle()
 		
 		return true
@@ -26,9 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	private var oneOfStyles = true
 	
 	func toggleCurrentStyle() {
-		oneOfStyles.toggle()
+		oneOfStyles = !oneOfStyles
 		
+		#if swift(>=4.2)
 		#warning("Styled - impl live reload for view hierarchy when style changes.")
+		#endif
 		
 		UIApplication.shared.currentStyleContainer = oneOfStyles ? lightStyleContainer : darkStyleContainer
 	}

@@ -66,7 +66,8 @@ public protocol Styles { }
 
 public struct Style {
 	
-	public typealias Props = [NSAttributedString.Key: Any]
+	public typealias Key = AttributedKey
+	public typealias Props = [Key: Any]
 	public let props: Props
 	
 	public init(props p: Props) {
@@ -77,16 +78,13 @@ public struct Style {
 
 public class StyleContainer {
 	
-	public
-	convenience init(with style: Styles) {
+	convenience public init(with style: Styles) {
 		self.init(styles: allProps(from: style))
 	}
 	
-	// MARK: - Internal
+	public let namedStyles: [String: Style]
 	
-	let namedStyles: [String: Style]
-	
-	required init(styles: [String: Style]) {
+	required public init(styles: [String: Style]) {
 		namedStyles = styles
 	}
 	

@@ -1,6 +1,5 @@
 //
 //  FlexibleContainerView.swift
-//  FlexContainer
 //
 //  Created by kernel on 12/23/16.
 //  Copyright © 2016 ReImpl. All rights reserved.
@@ -183,8 +182,13 @@ open class FlexibleContainerView: UIView {
 		switch rule {
 		case .horizontal:
 			let viewToPinTo: UIView
-			let margin: NSLayoutConstraint.Attribute
 			let offset: CGFloat
+			
+			#if swift(>=4.2)
+			let margin: NSLayoutConstraint.Attribute
+			#else
+			let margin: NSLayoutAttribute
+			#endif
 			
 			if let lastSubview = siblingView {
 				viewToPinTo = lastSubview
@@ -208,9 +212,14 @@ open class FlexibleContainerView: UIView {
 			subviewsConstraints.append(right)
 			
 		case .vertical:
-			let viewToPinTo: UIView
-			let margin: NSLayoutConstraint.Attribute
 			let offset: CGFloat
+			let viewToPinTo: UIView
+			
+			#if swift(>=4.2)
+			let margin: NSLayoutConstraint.Attribute
+			#else
+			let margin: NSLayoutAttribute
+			#endif
 			
 			if let lastSubview = siblingView {
 				viewToPinTo = lastSubview

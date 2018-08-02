@@ -9,15 +9,29 @@
 import UIKit
 
 public protocol FlowController {
-	
 	var flow: Flow { get }
-	
 }
+
+#if swift(>=4.2)
+public typealias WindowLevel = UIWindow.Level
+public var normalWindowLevel: WindowLevel {
+	return .normal
+}
+#else
+public typealias WindowLevel = UIWindowLevel
+public var normalWindowLevel: WindowLevel {
+	return UIWindowLevelNormal
+}
+#endif
 
 public extension UIApplication {
 	
-	@inlinable public
-	func presentWindow(with flow: Flow, windowLevel: UIWindow.Level = .normal, windowRect: CGRect = UIScreen.main.bounds) {
+//	#if swift(>=4.2)
+//	@inlinable
+//	#endif
+//	public func presentWindow(with flow: Flow, windowLevel: WindowLevel = normalWindowLevel, windowRect: CGRect = UIScreen.main.bounds) {
+	public func presentWindow(with flow: Flow, windowRect: CGRect = UIScreen.main.bounds) {
+	
 		let hasExistingWindow: Bool
 		let existingWindow: UIWindow
 		
@@ -28,7 +42,7 @@ public extension UIApplication {
 			existingWindow = UIWindow(frame: windowRect)
 			hasExistingWindow = false
 		}
-		existingWindow.windowLevel = windowLevel
+//		existingWindow.windowLevel = windowLevel
 		
 		let storyboard = UIStoryboard.load(flow.initialStoryboard)
 		let ctrl = storyboard.instantiateInitialViewController()!
@@ -46,8 +60,10 @@ public extension UIApplication {
 
 extension UIStoryboard {
 	
-	@usableFromInline static
-		func load(_ storyboard: Storyboard) -> UIStoryboard {
+//	#if swift(>=4.2)
+//	@usableFromInline
+//	#endif
+	static func load(_ storyboard: Storyboard) -> UIStoryboard {
 		return UIStoryboard(name: storyboard.name, bundle: nil)
 	}
 	
@@ -56,8 +72,10 @@ extension UIStoryboard {
 
 extension UIViewController: FlowController {
 	
-	@inlinable public
-	var flow: Flow {
+//	#if swift(>=4.2)
+//	@inlinable
+//	#endif
+	public var flow: Flow {
 		let flow: Flow
 		
 		if let thisFlow = getFlowValue() {
@@ -79,12 +97,16 @@ extension UIViewController {
 	
 	// MARK: - 'flow'
 	
-	@usableFromInline
+//	#if swift(>=4.2)
+//	@usableFromInline
+//	#endif
 	func getFlowValue() -> Flow? {
 		return objc_getAssociatedObject(self, &flowKey) as? Flow
 	}
 	
-	@usableFromInline
+//	#if swift(>=4.2)
+//	@usableFromInline
+//	#endif
 	func setFlowValue(_ flow: Flow) {
 		objc_setAssociatedObject(self, &flowKey, flow, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
 	}

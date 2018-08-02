@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlexContainer'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'FlexContainer is oversimplified StackView that hides tons of limitations.'
 
   s.description      = <<-DESC
@@ -18,8 +18,15 @@ FlexContainer is oversimplified StackView that hides tons of limitations.
 
   # s.source_files = 'FlexContainer/Classes/**/*'
 
+  s.subspec 'Foundation' do |f|
+    f.frameworks = 'Foundation'
+
+    f.source_files = "FlexContainer/Classes/Foundation/*.{swift}"
+  end
+
   s.subspec 'UIKit' do |ui|
     ui.frameworks = 'UIKit'
+    ui.dependency 'FlexContainer/Foundation'
 
     ui.source_files = "FlexContainer/Classes/UIKit/*.{swift}"
   end

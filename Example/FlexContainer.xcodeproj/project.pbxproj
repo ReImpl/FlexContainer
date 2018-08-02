@@ -394,6 +394,7 @@
 			baseConfigurationReference = C0AEFF53FB899D609F03CE04 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 79Q5K765J7;
 				INFOPLIST_FILE = FlexContainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -412,6 +413,7 @@
 			baseConfigurationReference = 1C1C52F188439C2BE2A0B2E0 /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 79Q5K765J7;
 				INFOPLIST_FILE = FlexContainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
