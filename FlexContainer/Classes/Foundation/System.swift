@@ -16,7 +16,7 @@ public func onMainQueue(afterDelay seconds: Int, action: @escaping () -> ()) {
 }
 
 public func onMainQueue(afterDelay millis: Double, action: @escaping () -> ()) {
-	let time = DispatchTime.now() + DispatchTimeInterval.milliseconds(Int(millis) * 1000)
+	let time = DispatchTime.now() + DispatchTimeInterval.milliseconds(Int(millis * 1000))
 	
 	DispatchQueue.main.asyncAfter(deadline: time, execute: action)
 }
