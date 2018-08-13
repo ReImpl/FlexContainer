@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlexContainer'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'FlexContainer is oversimplified StackView that hides tons of limitations.'
 
   s.description      = <<-DESC
