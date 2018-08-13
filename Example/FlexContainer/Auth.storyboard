@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G0S-wp-3eS">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="QcP-yA-HQv">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="G0S-wp-3eS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T15-Nd-6Nx">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nAD-C0-0Go" kind="relationship" relationship="rootViewController" id="VPo-si-qe6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MO2-1m-YEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-958" y="54"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="RRO-Go-gdk">
+            <objects>
+                <viewController id="nAD-C0-0Go" customClass="LoginViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UnT-zQ-hAZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4D-DV-mat">
+                                <rect key="frame" x="165.66666666666666" y="389.66666666666669" width="44" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginClicked:" destination="nAD-C0-0Go" eventType="touchUpInside" id="ei9-bo-ASi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l4D-DV-mat" firstAttribute="centerY" secondItem="UnT-zQ-hAZ" secondAttribute="centerY" id="2w0-2X-i8o"/>
+                            <constraint firstItem="l4D-DV-mat" firstAttribute="centerX" secondItem="UnT-zQ-hAZ" secondAttribute="centerX" id="MNL-dE-kFn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N5D-Pw-hvl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="m09-K2-1NN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hx-Rm-SFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="54"/>
+        </scene>
+    </scenes>
+</document>

@@ -26,34 +26,44 @@ public var normalWindowLevel: WindowLevel {
 
 public extension UIApplication {
 	
+	public enum WindowMode {
+		case key
+		case new
+	}
+	
 //	#if swift(>=4.2)
 //	@inlinable
 //	#endif
-//	public func presentWindow(with flow: Flow, windowLevel: WindowLevel = normalWindowLevel, windowRect: CGRect = UIScreen.main.bounds) {
-	public func presentWindow(with flow: Flow, windowRect: CGRect = UIScreen.main.bounds) {
-	
-		let hasExistingWindow: Bool
-		let existingWindow: UIWindow
-		
-		if let window = delegate?.window as? UIWindow {
-			existingWindow = window
-			hasExistingWindow = true
-		} else {
-			existingWindow = UIWindow(frame: windowRect)
-			hasExistingWindow = false
-		}
-//		existingWindow.windowLevel = windowLevel
-		
+	@discardableResult
+	public func presentWindow(with flow: Flow, rect: CGRect = UIScreen.main.bounds, level: WindowLevel = normalWindowLevel, mode: WindowMode = .key) -> UIWindow {
 		let storyboard = UIStoryboard.load(flow.initialStoryboard)
 		let ctrl = storyboard.instantiateInitialViewController()!
 		
 		ctrl.setFlowValue(flow)
 		
-		existingWindow.rootViewController = ctrl
+		let displayWindow = window(rect: rect, level: level, mode: mode)
+		displayWindow.rootViewController = ctrl
 		
-		if !hasExistingWindow {
-			existingWindow.makeKeyAndVisible()
+		if mode == .key {
+			displayWindow.makeKeyAndVisible()
+		} else {
+			displayWindow.isHidden = false
 		}
+		
+		return displayWindow
+	}
+	
+	private func window(rect: CGRect, level: WindowLevel, mode: WindowMode) -> UIWindow {
+		let window: UIWindow
+		
+		if mode == .key, let existingWindow = delegate?.window as? UIWindow {
+			window = existingWindow
+		} else {
+			window = UIWindow(frame: rect)
+			window.windowLevel = level
+		}
+		
+		return window
 	}
 	
 }
