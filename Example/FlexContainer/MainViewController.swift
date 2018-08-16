@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(logoutPressed))
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(logoutPressed))
 	}
 	
 	// MARK: - Actions

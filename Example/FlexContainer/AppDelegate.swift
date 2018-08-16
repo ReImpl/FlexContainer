@@ -26,8 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		return true
 	}
 	
-	let lightStyleContainer = StyleContainer(with: LightStyle())
-	let darkStyleContainer = StyleContainer(with: DarkStyle())
+	let lightStyleContainer = LightStyle()
+	let darkStyleContainer = DarkStyle()
 	
 	private var oneOfStyles = true
 	

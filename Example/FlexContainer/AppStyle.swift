@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Layoutless
 import FlexContainer
 
-protocol AppStyle: Styles {
+protocol AppStyle: StyleContainer {
 	
-	var background1: Style { get }
-	var background2: Style { get }
+	var background1: Style<UIView> { get }
+	var background2: Style<UIView> { get }
 	
 }

@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlexContainer'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'FlexContainer is oversimplified StackView that hides tons of limitations.'
 
   s.description      = <<-DESC
@@ -14,7 +14,7 @@ FlexContainer is oversimplified StackView that hides tons of limitations.
   s.author           = { 'genkernel' => 'kernel@reimplement.mobi' }
   s.source           = { :git => 'https://github.com/ReImpl/FlexContainer.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   # s.source_files = 'FlexContainer/Classes/**/*'
 
@@ -33,6 +33,7 @@ FlexContainer is oversimplified StackView that hides tons of limitations.
 
   s.subspec 'Styled' do |styled|
     styled.dependency 'FlexContainer/UIKit'
+    styled.dependency 'Layoutless'
 
     styled.source_files = "FlexContainer/Classes/Styled/*.{swift}"
   end

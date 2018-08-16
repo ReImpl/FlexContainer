@@ -18,7 +18,7 @@ final class LoginViewController: UIViewController {
 	@IBAction
 	private func loginClicked(_ sender: UIButton) {
 		#if swift(>=4.2)
-		let overlayLevel = WindowLevel(rawValue: UIWindow.Level.alert.rawValue - 1)
+		let overlayLevel = UIWindow.Level.alert.rawValue - 1
 		#else
 		let overlayLevel = UIWindowLevelAlert - 1
 		#endif

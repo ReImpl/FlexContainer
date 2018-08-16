@@ -7,24 +7,17 @@
 //
 
 import UIKit
+import Layoutless
 import FlexContainer
 
 struct LightStyle: AppStyle {
 	
-	let background1: Style = {
-		let props: Style.Props = [
-			.backgroundColor: UIColor.white
-		]
-		
-		return Style(props: props)
-	}()
+	let background1 = Style<UIView> {
+		$0.backgroundColor = .white
+	}
 	
-	var background2: Style = {
-		let props: Style.Props = [
-			.backgroundColor: UIColor.gray
-		]
-		
-		return Style(props: props)
-	}()
+	let background2 = Style<UIView> {
+		$0.backgroundColor = .gray
+	}
 	
 }

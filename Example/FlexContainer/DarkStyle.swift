@@ -7,24 +7,17 @@
 //
 
 import UIKit
+import Layoutless
 import FlexContainer
 
 final class DarkStyle: AppStyle {
 	
-	let background1: Style = {
-		let props: Style.Props = [
-			.backgroundColor: UIColor.black
-		]
-		
-		return Style(props: props)
-	}()
+	let background1 = Style<UIView> {
+		$0.backgroundColor = .black
+	}
 	
-	var background2: Style = {
-		let props: Style.Props = [
-			.backgroundColor: UIColor.darkGray
-		]
-		
-		return Style(props: props)
-	}()
+	let background2 = Style<UIView> {
+		$0.backgroundColor = .darkGray
+	}
 	
 }
