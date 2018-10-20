@@ -15,6 +15,8 @@ open class TemporaryFile {
 		}
 	}
 	
+	// Copies input file from 'originalUrl' to .cachesDirectory.
+	// Deletes temp copy from Cache when TemporaryFile is deallocated.
 	required public init?(movingExistingFileAt originalUrl: URL) {
 		guard originalUrl.isFileURL,
 			let originalFileName = originalUrl.pathComponents.last,
@@ -28,7 +30,7 @@ open class TemporaryFile {
 		do {
 			try FileManager.default.moveItem(at: originalUrl, to: pathUrl)
 		} catch {
-			assertionFailure()
+//			assertionFailure()
 			
 			return nil
 		}
@@ -37,9 +39,7 @@ open class TemporaryFile {
 	public let fileName: String
 	public let pathUrl: URL
 	
-//	#if swift(>=4.2)
-//	@inlinable
-//	#endif
+	@inlinable
 	public var fileSize: UInt64 {
 		guard let attributes = try? FileManager.default.attributesOfItem(atPath: pathUrl.path) else {
 			return 0

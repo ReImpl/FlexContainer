@@ -9,16 +9,12 @@ import Foundation
 
 public extension NSObjectProtocol {
 	
-//	#if swift(>=4.2)
-//	@inlinable
-//	#endif
+	@inlinable
 	public var className: String {
 		return type(of: self).className
 	}
 	
-//	#if swift(>=4.2)
-//	@inlinable
-//	#endif
+	@inlinable
 	public static var className: String {
 		return NSStringFromClass(self).components(separatedBy: ".").last!
 	}

@@ -15,9 +15,12 @@
 		1E506ABB2121D7C4008C145B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E506ABA2121D7C4008C145B /* LoginViewController.swift */; };
 		1E506ABD2121D88C008C145B /* LoginFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E506ABC2121D88C008C145B /* LoginFlow.swift */; };
 		1E506ABF2121DAC0008C145B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E506ABE2121DAC0008C145B /* MainViewController.swift */; };
+		1E5F3CFF2165561900FB3EE0 /* ScrollableContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E5F3CFE2165561900FB3EE0 /* ScrollableContent.storyboard */; };
+		1E5F3D012165564100FB3EE0 /* ScrollableContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F3D002165564100FB3EE0 /* ScrollableContentViewController.swift */; };
 		1E68F247210FD8480080B7BE /* LightStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68F246210FD8480080B7BE /* LightStyle.swift */; };
 		1E68F249210FD8520080B7BE /* DarkStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68F248210FD8520080B7BE /* DarkStyle.swift */; };
 		1E68F24B210FDC410080B7BE /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68F24A210FDC410080B7BE /* AppStyle.swift */; };
+		1E89E652216555AB009A0637 /* ScrollableContentFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E89E651216555AB009A0637 /* ScrollableContentFlow.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -36,9 +39,12 @@
 		1E506ABA2121D7C4008C145B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1E506ABC2121D88C008C145B /* LoginFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlow.swift; sourceTree = "<group>"; };
 		1E506ABE2121DAC0008C145B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1E5F3CFE2165561900FB3EE0 /* ScrollableContent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScrollableContent.storyboard; sourceTree = "<group>"; };
+		1E5F3D002165564100FB3EE0 /* ScrollableContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableContentViewController.swift; sourceTree = "<group>"; };
 		1E68F246210FD8480080B7BE /* LightStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightStyle.swift; sourceTree = "<group>"; };
 		1E68F248210FD8520080B7BE /* DarkStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkStyle.swift; sourceTree = "<group>"; };
 		1E68F24A210FDC410080B7BE /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
+		1E89E651216555AB009A0637 /* ScrollableContentFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableContentFlow.swift; sourceTree = "<group>"; };
 		205E47CF5F3C55B8DD03A61A /* Pods_FlexContainer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexContainer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2572922A7C7D6DC4ED5E6950 /* Pods_FlexContainer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexContainer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +99,7 @@
 				1E506AB72121D78F008C145B /* Auth */,
 				1E506AAA2121CEB8008C145B /* Main */,
 				1E506AAD2121CF06008C145B /* OverlayWindow */,
+				1E89E654216555CA009A0637 /* ScrollableContent */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 			);
 			name = UI;
@@ -113,6 +120,7 @@
 				1E506ABC2121D88C008C145B /* LoginFlow.swift */,
 				1E506AB32121D0A6008C145B /* MainFlow.swift */,
 				1E506AB52121D0B4008C145B /* LoadingOverlayFlow.swift */,
+				1E89E651216555AB009A0637 /* ScrollableContentFlow.swift */,
 			);
 			name = Flow;
 			sourceTree = "<group>";
@@ -134,6 +142,15 @@
 				1E68F248210FD8520080B7BE /* DarkStyle.swift */,
 			);
 			name = Styles;
+			sourceTree = "<group>";
+		};
+		1E89E654216555CA009A0637 /* ScrollableContent */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F3D002165564100FB3EE0 /* ScrollableContentViewController.swift */,
+				1E5F3CFE2165561900FB3EE0 /* ScrollableContent.storyboard */,
+			);
+			path = ScrollableContent;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -265,6 +282,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				1E506AB92121D7B7008C145B /* Auth.storyboard in Resources */,
+				1E5F3CFF2165561900FB3EE0 /* ScrollableContent.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				1E506AB12121CF49008C145B /* Overlay.storyboard in Resources */,
 			);
@@ -279,7 +297,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FlexContainer/FlexContainer.framework",
 				"${BUILT_PRODUCTS_DIR}/Layoutless/Layoutless.framework",
 			);
@@ -290,7 +308,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E20D6109DF088A7BDC09159A /* [CP] Check Pods Manifest.lock */ = {
@@ -325,8 +343,10 @@
 				1E506AB62121D0B4008C145B /* LoadingOverlayFlow.swift in Sources */,
 				1E506ABD2121D88C008C145B /* LoginFlow.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				1E89E652216555AB009A0637 /* ScrollableContentFlow.swift in Sources */,
 				1E506AAF2121CF27008C145B /* OverlayViewController.swift in Sources */,
 				1E68F247210FD8480080B7BE /* LightStyle.swift in Sources */,
+				1E5F3D012165564100FB3EE0 /* ScrollableContentViewController.swift in Sources */,
 				1E68F24B210FDC410080B7BE /* AppStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +425,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VALID_ARCHS = arm64;
 			};
 			name = Debug;
@@ -454,6 +475,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = arm64;
 			};

@@ -14,14 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 	
-	#if swift(>=4.2)
-	public typealias LaunchOptionKey = UIApplication.LaunchOptionsKey
-	#else
-	public typealias LaunchOptionKey = UIApplicationLaunchOptionsKey
-	#endif
+	typealias LaunchOptionKey = UIApplication.LaunchOptionsKey
 	
 	func application(_ app: UIApplication, willFinishLaunchingWithOptions opts: [LaunchOptionKey : Any]? = nil) -> Bool {
 		toggleCurrentStyle()
+		
+		app.presentWindow(with: ScrollableContentFlow())
 		
 		return true
 	}
@@ -34,9 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func toggleCurrentStyle() {
 		oneOfStyles = !oneOfStyles
 		
-		#if swift(>=4.2)
 		#warning("Styled - impl live reload for view hierarchy when style changes.")
-		#endif
 		
 		UIApplication.shared.currentStyleContainer = oneOfStyles ? lightStyleContainer : darkStyleContainer
 	}

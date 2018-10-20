@@ -7,11 +7,7 @@
 
 import Foundation
 
-#if swift(>=4.2)
 public typealias AttributedKey = NSAttributedString.Key
-#else
-public typealias AttributedKey = NSAttributedStringKey
-#endif
 
 public extension NSAttributedString {
 	

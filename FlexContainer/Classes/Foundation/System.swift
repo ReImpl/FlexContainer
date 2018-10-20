@@ -33,6 +33,7 @@ func radiansToDegrees(_ radians: Float) -> Float {
 
 // MARK: -
 
+/// Returns time in nanoseconds.
 public func measure(_ action: () -> Void) -> Double {
 	//	do {
 	var info = mach_timebase_info(numer: 0, denom: 0)

@@ -99,7 +99,7 @@ open class FlexibleContainerView: UIView {
 			case 0:
 				if subviews.count > 1 {
 					let constraint: NSLayoutConstraint
-					let (top, _, _, left) = subviews[1].constraintsToPinToSuperview()
+					let (top, _, _, left) = subviews[1].constraintsToPinToSuperviewEdges()
 					
 					switch rule {
 					case .horizontal:
@@ -116,7 +116,7 @@ open class FlexibleContainerView: UIView {
 					let index = subviewsConstraints.count - 2
 					
 					let constraint: NSLayoutConstraint
-					let (_, right, bottom, _) = subviews[index].constraintsToPinToSuperview()
+					let (_, right, bottom, _) = subviews[index].constraintsToPinToSuperviewEdges()
 					
 					switch rule {
 					case .horizontal:
@@ -174,9 +174,9 @@ open class FlexibleContainerView: UIView {
 		
 		let (top, right, bottom, left): (NSLayoutConstraint, NSLayoutConstraint, NSLayoutConstraint, NSLayoutConstraint)
 		if view.preservesSuperviewLayoutMargins {
-			(top, right, bottom, left) = view.constraintsToPinToSuperviewMargins()
+			(top, right, bottom, left) = view.constraintsToPinToSuperviewEdges()
 		} else {
-			(top, right, bottom, left) = view.constraintsToPinToSuperview()
+			(top, right, bottom, left) = view.constraintsToPinToSuperviewEdges()
 		}
 		
 		switch rule {
@@ -184,11 +184,7 @@ open class FlexibleContainerView: UIView {
 			let viewToPinTo: UIView
 			let offset: CGFloat
 			
-			#if swift(>=4.2)
 			let margin: NSLayoutConstraint.Attribute
-			#else
-			let margin: NSLayoutAttribute
-			#endif
 			
 			if let lastSubview = siblingView {
 				viewToPinTo = lastSubview
@@ -215,11 +211,7 @@ open class FlexibleContainerView: UIView {
 			let offset: CGFloat
 			let viewToPinTo: UIView
 			
-			#if swift(>=4.2)
 			let margin: NSLayoutConstraint.Attribute
-			#else
-			let margin: NSLayoutAttribute
-			#endif
 			
 			if let lastSubview = siblingView {
 				viewToPinTo = lastSubview

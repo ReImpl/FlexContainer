@@ -18,15 +18,9 @@ public extension UIColor {
 	}
 	
 	static var random: UIColor {
-		#if swift(>=4.2)
 		let r = CGFloat.random(in: 0...1)
 		let g = CGFloat.random(in: 0...1)
 		let b = CGFloat.random(in: 0...1)
-		#else
-		let r = CGFloat(arc4random()) / CGFloat.greatestFiniteMagnitude
-		let g = CGFloat(arc4random()) / CGFloat.greatestFiniteMagnitude
-		let b = CGFloat(arc4random()) / CGFloat.greatestFiniteMagnitude
-		#endif
 		
 		return UIColor(red: r, green: g, blue: b, alpha: 1)
 	}

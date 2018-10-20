@@ -17,13 +17,11 @@ final class LoginViewController: UIViewController {
 	
 	@IBAction
 	private func loginClicked(_ sender: UIButton) {
-		#if swift(>=4.2)
-		let overlayLevel = UIWindow.Level.alert.rawValue - 1
-		#else
-		let overlayLevel = UIWindowLevelAlert - 1
-		#endif
-		
-		let loadingWindow = UIApplication.shared.presentWindow(with: OverlayFlow(), level: overlayLevel, mode: .new)
+		let loadingWindow = UIApplication.shared.presentWindow(
+			with: OverlayFlow(),
+			level: UIWindow.Level(rawValue: UIWindow.Level.alert.rawValue - 1),
+			mode: .new
+		)
 		
 		onMainQueue(afterDelay: 4) {
 			UIApplication.shared.presentWindow(with: MainFlow())

@@ -9,9 +9,9 @@ import UIKit
 
 public extension UIView {
 	
-	func colorizeBorder(with color: UIColor, width: CGFloat = 1) {
+	func colorizeBorder(with color: UIColor, width: CGFloat? = nil) {
 		layer.borderColor = color.cgColor
-		layer.borderWidth = width
+		layer.borderWidth = width ?? (1 / UIScreen.main.scale)
 	}
 	
 }

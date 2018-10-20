@@ -8,7 +8,7 @@
 public extension UITableView {
 	
 	@objc
-	public func registerCell(nibClass cls: UITableViewCell.Type) {
+	public func registerCell(nibBackedClass cls: UITableViewCell.Type) {
 		let identifier = cls.className
 		let nib = UINib(nibName: identifier, bundle: nil)
 		
